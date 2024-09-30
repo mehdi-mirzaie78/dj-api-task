@@ -19,4 +19,11 @@ class EstimateAdmin(admin.ModelAdmin):
 class EstimateEquipmentAdmin(admin.ModelAdmin):
     readonly_fields = ["created_on"]
     fields = ["estimate", "equipment", "quantity", "price_override"]
-    list_display = ["estimate", "estimate__created_by", "equipment", "quantity", "price_override", "created_on"]
+    list_display = [
+        "estimate",
+        "estimate__created_by",
+        "equipment",
+        "quantity",
+        "price_override",
+        "created_on",
+    ]

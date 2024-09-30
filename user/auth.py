@@ -10,7 +10,7 @@ class EmailAuthBackend(ModelBackend):
 
     @staticmethod
     def authenticate(
-            request: HttpRequest, username=None, password=None, **kwargs
+        request: HttpRequest, username=None, password=None, **kwargs
     ) -> AbstractUser | None:
 
         try:

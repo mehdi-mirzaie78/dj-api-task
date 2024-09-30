@@ -6,7 +6,7 @@ from .serializers import EstimateSerializer
 
 class EstimateListCreateView(generics.ListCreateAPIView):
     permission_classes = [IsSuperUser]
-    queryset = Estimate.objects.prefetch_related('estimateequipment_set').all()
+    queryset = Estimate.objects.prefetch_related("estimateequipment_set").all()
     serializer_class = EstimateSerializer
 
     def get_serializer_context(self):
@@ -15,5 +15,5 @@ class EstimateListCreateView(generics.ListCreateAPIView):
 
 class EstimateRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsSuperUser]
-    queryset = Estimate.objects.prefetch_related('estimateequipment_set').all()
+    queryset = Estimate.objects.prefetch_related("estimateequipment_set").all()
     serializer_class = EstimateSerializer
